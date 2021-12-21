@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --main-background-color: #7D99E8;
+    --main-color: #EFBD91;
+}
+
+body {
+    background-color: var(--main-background-color);
+    color: var(--main-color);
+    font-size: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--main-color) solid .2em;
+    margin-bottom: 2em;
+    /* box-shadow: 5px 10px #F7E6CA; */
+}
+
+h1 {
+    font-size: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+ figure {
+     background-image: url(../images/tiles.jpg);
+     /* opacity: .5; */
+     height: 200px; /* You must set a specified height */
+     background-position: center; /* Center the image */
+     background-repeat: no-repeat; /* Do not repeat the image */
+     background-size: cover; /* Resize the background image to cover the entire container */
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+ }
+
+ figure div {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ h2 {
+     font-size: 2em;
+     display: flex;
+     align-items: flex-end;
+ }
+
+ p {
+    font-size: 1.5em;
+ }
+
+ main {
+     display: flex;
+     height: 800px;
+     width: 100%;
+ }
+
+ aside {
+     /* display: flex;
+     flex-direction: column; */
+     flex: 1 0 20%; /* doing width and height this way (percentages) might be tricky when it comes to screen resizes?? */
+     height: 100%;
+     outline: black 2px dashed;
+ }
+
+ section {
+     /* display: flex;
+     flex-direction: column; */
+     flex: 1 0 80%;
+     height: 100%;
+     background-color: coral;
+ }
