@@ -4,14 +4,23 @@
 }
 
 :root {
-    --main-background-color: #7D99E8;
-    --main-color: #EFBD91;
+
+    --main-background-color: #EFBD91;
+    --main-color: #7D99E8;
 }
 
 body {
     background-color: var(--main-background-color);
+    /* background-image: linear-gradient(to bottom right, #F9F8ED, #B2DFF4); */
     color: var(--main-color);
     font-size: 10px;
+    background:
+  linear-gradient(135deg, #F9F8ED 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, #F9F8ED 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, #F9F8ED 25%, transparent 25%),
+  linear-gradient(45deg, #F9F8ED 25%, transparent 25%);
+background-size: 100px 100px;
+background-color: #FDDF9E;
 }
 
 header {
@@ -62,22 +71,101 @@ a {
 
  main {
      display: flex;
-     height: 800px;
+     /* height: fit-content; */
      width: 100%;
+     flex-wrap: wrap;
  }
 
- aside {
-     /* display: flex;
-     flex-direction: column; */
-     flex: 1 0 20%; /* doing width and height this way (percentages) might be tricky when it comes to screen resizes?? */
-     height: 100%;
-     outline: black 2px dashed;
+ .about-me {
+     display: flex;
+     flex: 1 0 100%;
+     height: fit-content;
  }
 
- section {
+ h3 {
      /* display: flex;
      flex-direction: column; */
+     flex: 1 0 15%; /* doing width and height this way (percentages) might be tricky when it comes to screen resizes?? */
+     border-right: black 2px dashed;
+     font-size: 4em;
+     text-align: right;
+     padding: .5em;
+ }
+
+.about-me div {
+    flex: 1 0 80%;
+    font-size: 1.5em;
+    /* margin-left: 5px; */
+}
+
+p {
+    margin: 1em;
+}
+
+.my-work {
+    display: flex;
+    width: 100%;
+    /* height: fit-content; */
+    justify-content: space-between;
+}
+
+ .card {
+     flex: 1 0 40%;
+     height: 175px;
+     margin: 5em;
+     background-color: black;
+     background-image: url(../images/tiles.jpg);
+     transition: 1.5s ease-in-out;
+ }
+
+ .cards {
+     display: flex;
      flex: 1 0 80%;
-     height: 100%;
-     background-color: coral;
+     /* height: 100%; */
+     /* background-color: coral; */
+     flex-wrap: wrap;
+     /* margin: 1em; */
+     justify-content: space-evenly;
+ }
+
+ .large-card {
+     flex: 0 0 100%;
+     height: 250px;
+     flex: 1 0 70%;
+     margin: 20px;
+     /* background-image: linear-gradient(to bottom, rgba(255,255,0,0.5), rgba(0,0,255,0.5)) */
+     background-image: url(../images/tiles.jpg);
+ }
+
+ .card:hover {
+     flex-grow: 10;
+     transform: scale(1.2);
+ }
+
+/* .card:hover {
+    flex: 1 0 50%;
+    transform: scale(1.2);
+} */
+
+footer {
+    width: 100%;
+    height: 150px;
+
+}
+ /* .article1 {
+ }
+
+ .article2 {
+ }
+
+ .article3 {
+ }
+
+ .article4 {
+ }
+  */
+
+ img {
+    max-width:100%;
+    max-height:100%;
  }

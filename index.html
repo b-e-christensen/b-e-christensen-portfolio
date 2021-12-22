@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
+
 <body>
     <header>
         <h1>This is my header</h1>
@@ -21,27 +23,67 @@
     <figure>
         <div>
             <p>Do not let the calm, dulcet tones of these pastels fool you.</p>
-            <h2>cool subtitle here</h2> 
+            <h2>cool subtitle here</h2>
         </div>
     </figure>
 
 
     <!-- will flex box be the best way to organize this? it seems grid template is begging to be used, but i dont know how flexible that is long term if i need to add things or with smaller screens. probably decent practice to just keep trying to get this going with flex box -->
     <main>
-        <aside id="about-me">
-            <!-- about me info here -->
-        </aside>
+        <!-- about me section. spacing of it looks good currently -->
+        <section id="about-me" class="about-me">
+            <h3>About<br>Me</h3>
+            <div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut perspiciatis laudantium rerum, tempora
+                    exercitationem sunt. Reiciendis similique totam corporis tenetur. Excepturi animi eum atque ducimus
+                    perspiciatis sapiente harum ullam aspernatur.</p>
+            </div>
 
-        <section id="my-work">
-            <!-- how ever many divs in here for each 'card' -->
+        </section>
 
+        <section id="my-work" class="my-work">
+            
+            <h3>My<br>Work</h3>
+          
+            <section class="cards">
+            
+                <article class="card large-card">
+                   <h1>largecard</h1>
+                    <!-- <img src="./assets/images/computer-code.jpg" alt=""> -->
+                     
+                </article>
+                <article class="card article1">
+                    <!-- <img src="./assets/images/computer.jpg" alt="computer"> -->
+                    <h2>article1</h2>
+
+                </article>
+                <article class="card article2">
+
+                    <h2>article2</h2>
+
+                </article>
+                <article class="card article3">
+                    <!-- <img src="./assets/images/color-splash.jpg" alt=""> -->
+                    <h2>article3</h2>
+
+                </article>
+                <article class="card article4">
+                    <h2>article4</h2>
+
+                </article>
+            </section>
         </section>
 
     </main>
 
     <footer id="contact">
         <!-- contact info here -->
+        <h4>555.555.5555</h4>
+        <a href="mailto:ben.eric.christensen@gmail.com">ben.eric.christensen@gmail.com</a>
+        <a href="#" target="_blank">Resume</a>
+        <a href="#" target="_blank">Linkdin</a>
     </footer>
-    
+
 </body>
+
 </html>
