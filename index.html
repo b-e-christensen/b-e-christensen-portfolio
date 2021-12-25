@@ -10,16 +10,21 @@
 </head>
 
 <body>
+    <!-- add more grabby intro on the h1. just added a <ul> to the anchor tags and need to reorganize on the basis that it is a list now -->
     <header>
         <h1>This is my header</h1>
         <nav>
-            <a href="#about-me">About Me</a>
-            <a href="#my-work">My Work</a>
-            <a href="#contact">Contact</a>
-            <a href="#">Resume</a>
+            <ul>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#my-work">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Resume</a></li>
+            </ul>
         </nav>
     </header>
 
+    <!-- does this image need to be linked from the html? probably not, but might be good practice. otherwise need to reorganize <h2> and get rid of <p> ?? -->
+        <!-- i still do need to add an image/avatar of myself. this would probably be a good location for that, or maybe the footer where all my contact info is? -->
     <figure>
         <div>
             <p>Do not let the calm, dulcet tones of these pastels fool you.</p>
@@ -28,47 +33,52 @@
     </figure>
 
 
-    <!-- will flex box be the best way to organize this? it seems grid template is begging to be used, but i dont know how flexible that is long term if i need to add things or with smaller screens. probably decent practice to just keep trying to get this going with flex box -->
+        <!-- code is pretty bloated currently definitely need to trim it and reorganize -->
     <main>
-        <!-- about me section. spacing of it looks good currently -->
+        <!-- id is good. may need to change class? -->
         <section id="about-me" class="about-me">
+            <div class="aside">
             <h3>About<br>Me</h3>
+            </div>
             <div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut perspiciatis laudantium rerum, tempora
                     exercitationem sunt. Reiciendis similique totam corporis tenetur. Excepturi animi eum atque ducimus
                     perspiciatis sapiente harum ullam aspernatur.</p>
             </div>
-
         </section>
-
+        
         <section id="my-work" class="my-work">
-            
-            <h3>My<br>Work</h3>
-
-            <!-- <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nemo officiis quisquam hic, est quos repellendus itaque vero reprehenderit labore praesentium suscipit iusto consequuntur aspernatur nesciunt cum. Labore, optio quia?</h4> -->
-          
+            <div class="aside"><h3>My<br>Work</h3></div>
+          <!-- is this the best way to organize all the different classes? -->
             <section class="cards">
-            
+                <!-- desperately need to figure out how to format this large card -- perhaps i could just make this be the section where i have my photo and what not. -->
                 <article class="card large-card">
                    <h1>largecard</h1>
-                     
                 </article>
-                <article class="card article1">
-                    <h2>article1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quidem aliquid qui quas mollitia unde suscipit temporibus minima officia nisi! Praesentium quis, maiores corrupti officia itaque qui cum dolores repellat?</h2>
 
+                <article class="card">
+                    <a href="#" target="_blank"></a>
+                    <aside class="description">
+                    <h4>article1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quidem aliquid qui quas mollitia unde suscipit temporibus minima officia nisi! Praesentium quis, maiores corrupti officia itaque qui cum dolores repellat?</h4>
+                    </aside>
                 </article>
-                <article class="card article2">
-
-                    <h2>article2 lore</h2>
-
+                <!-- need to add anchor tags to each card -->
+                <article class="card">
+                    <aside class="description">
+                    <h4>article2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem exercitationem nihil ex natus qui nam. Optio, quos esse quod nemo natus rerum aut libero numquam at voluptate, error, enim non.</h4>
+                    </aside>
                 </article>
+
                 <article class="card article3">
-                    <h2>article3</h2>
-
+                    <aside class="description">
+                    <h4>article3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste mollitia dicta architecto tenetur? Dicta nisi reiciendis voluptatum non consectetur. Distinctio adipisci quod minima blanditiis odit consectetur asperiores aliquid totam sed.</h4>
+                    </aside>
                 </article>
-                <article class="card article4">
-                    <h2>article4</h2>
 
+                <article class="card article4">
+                    <aside class="description">
+                    <h4>article4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptates, voluptas itaque soluta autem dolor aliquid fugiat esse fugit. Doloremque doloribus aspernatur nobis corrupti itaque dolor ratione repellat hic voluptates?</h4>
+                    </aside>
                 </article>
             </section>
         </section>
@@ -77,7 +87,7 @@
 
     <footer id="contact">
         <!-- contact info here -->
-        <h4>555.555.5555</h4>
+        <h2>555.555.5555</h2>
         <a href="mailto:ben.eric.christensen@gmail.com">ben.eric.christensen@gmail.com</a>
         <a href="#" target="_blank">Resume</a>
         <a href="#" target="_blank">Linkdin</a>
