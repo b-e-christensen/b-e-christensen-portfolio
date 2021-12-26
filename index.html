@@ -10,75 +10,82 @@
 </head>
 
 <body>
-    <!-- add more grabby intro on the h1. just added a <ul> to the anchor tags and need to reorganize on the basis that it is a list now -->
+    <!-- header containing nav links -->
     <header>
         <h1>This is my header</h1>
         <nav>
             <ul>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#my-work">My Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#">Resume</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#my-work">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Resume</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- does this image need to be linked from the html? probably not, but might be good practice. otherwise need to reorganize <h2> and get rid of <p> ?? -->
-        <!-- i still do need to add an image/avatar of myself. this would probably be a good location for that, or maybe the footer where all my contact info is? -->
+    <!-- background image and self portrait -->
     <figure>
         <div>
-            <p>Do not let the calm, dulcet tones of these pastels fool you.</p>
-            <h2>cool subtitle here</h2>
+            <img class="portrait" src="./assets/images/portrait.jpg" alt="">
         </div>
     </figure>
 
-
-        <!-- code is pretty bloated currently definitely need to trim it and reorganize -->
     <main>
-        <!-- id is good. may need to change class? -->
+        <!-- about me section (need to replace latin with english) -->
         <section id="about-me" class="about-me">
-            <div class="aside">
-            <h3>About<br>Me</h3>
-            </div>
-            <div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut perspiciatis laudantium rerum, tempora
+            <aside>
+                <h3><br>About<br>Me</h3>
+            </aside>
+            <article>
+                <p>ipsum, dolor sit amet consectetur adipisicing elit. Ut perspiciatis laudantium rerum, tempora
                     exercitationem sunt. Reiciendis similique totam corporis tenetur. Excepturi animi eum atque ducimus
-                    perspiciatis sapiente harum ullam aspernatur.</p>
-            </div>
+                    perspiciatis sapiente harum ullam aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Quos voluptate doloremque aperiam. Magnam harum ipsam qui officia? Asperiores non ut mollitia
+                    molestias? Adipisci voluptas suscipit doloribus laborum rerum possimus laudantium?</p>
+            </article>
         </section>
-        
+
         <section id="my-work" class="my-work">
-            <div class="aside"><h3>My<br>Work</h3></div>
-          <!-- is this the best way to organize all the different classes? -->
+            <aside>
+                <h3>My<br>Work</h3>
+            </aside>
+
             <section class="cards">
-                <!-- desperately need to figure out how to format this large card -- perhaps i could just make this be the section where i have my photo and what not. -->
                 <article class="card large-card">
-                   <h1>largecard</h1>
+                    <h1>largecard</h1>
                 </article>
 
                 <article class="card">
                     <a href="#" target="_blank"></a>
-                    <aside class="description">
-                    <h4>article1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quidem aliquid qui quas mollitia unde suscipit temporibus minima officia nisi! Praesentium quis, maiores corrupti officia itaque qui cum dolores repellat?</h4>
-                    </aside>
+                    <div class="description">
+                        <h4>article1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi quidem aliquid qui
+                            quas mollitia unde suscipit temporibus minima officia nisi! Praesentium quis, maiores
+                            corrupti officia itaque qui cum dolores repellat?</h4>
+                    </div>
                 </article>
                 <!-- need to add anchor tags to each card -->
                 <article class="card">
-                    <aside class="description">
-                    <h4>article2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem exercitationem nihil ex natus qui nam. Optio, quos esse quod nemo natus rerum aut libero numquam at voluptate, error, enim non.</h4>
-                    </aside>
+                    <div class="description">
+                        <h4>article2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem exercitationem nihil
+                            ex natus qui nam. Optio, quos esse quod nemo natus rerum aut libero numquam at voluptate,
+                            error, enim non.</h4>
+                    </div>
                 </article>
 
                 <article class="card article3">
-                    <aside class="description">
-                    <h4>article3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste mollitia dicta architecto tenetur? Dicta nisi reiciendis voluptatum non consectetur. Distinctio adipisci quod minima blanditiis odit consectetur asperiores aliquid totam sed.</h4>
-                    </aside>
+                    <div class="description">
+                        <h4>article3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste mollitia dicta
+                            architecto tenetur? Dicta nisi reiciendis voluptatum non consectetur. Distinctio adipisci
+                            quod minima blanditiis odit consectetur asperiores aliquid totam sed.</h4>
+                    </div>
                 </article>
 
                 <article class="card article4">
-                    <aside class="description">
-                    <h4>article4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptates, voluptas itaque soluta autem dolor aliquid fugiat esse fugit. Doloremque doloribus aspernatur nobis corrupti itaque dolor ratione repellat hic voluptates?</h4>
-                    </aside>
+                    <div class="description">
+                        <h4>article4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptates,
+                            voluptas itaque soluta autem dolor aliquid fugiat esse fugit. Doloremque doloribus
+                            aspernatur nobis corrupti itaque dolor ratione repellat hic voluptates?</h4>
+                    </div>
                 </article>
             </section>
         </section>
@@ -87,7 +94,7 @@
 
     <footer id="contact">
         <!-- contact info here -->
-        <h2>555.555.5555</h2>
+        <h4>555.555.5555</h4>
         <a href="mailto:ben.eric.christensen@gmail.com">ben.eric.christensen@gmail.com</a>
         <a href="#" target="_blank">Resume</a>
         <a href="#" target="_blank">Linkdin</a>

@@ -29,7 +29,15 @@ h1 {
 }
 
 ul {
+    display: flex;
+    flex-direction: row;
     list-style: none;
+    justify-content: flex-end;
+    font-size: 1.5em;
+}
+
+li {
+    margin: 1em;
 }
 
 a {
@@ -39,53 +47,90 @@ a {
 
  figure {
      background-image: url(../images/paint-splashes.jpg);
-     opacity: .5; /* opacity will cause issues if i choose to place self-image/avatar in this div */
      height: 200px;
-     background-position: center; 
-     background-size: cover; /* Resize the background image to cover the entire container */
-     display: flex;
-     justify-content: flex-end;
-     align-items: flex-end;
- }
-
- /* can simplify this if i don't end up really using the <p> element. */
- figure div {
      width: 100%;
-     height: 100%;
      display: flex;
-     justify-content: space-between;
- }
-
- p {
-    font-size: 1.5em;
-    margin: 1em;
- }
-
- h2 {
-     display: flex;
-     align-items: flex-end;
- }
+ } 
+/* class of self portait */
+.portrait {
+     width: 15%;
+     object-fit: contain;
+     z-index: -100;
+     margin-top: .5%; 
+     margin-left: .5%;
+ } 
 
 main {
      display: flex;
      width: 100%;
-     flex-wrap: wrap;
      flex-direction: column;
  }
 
-.about-me div:nth-child(2) {
-    flex: 1 0 80%;
-    font-size: 1.5em;
-}
+.about-me {
+     display: flex;
+     flex: 1 0 100%;
+     height: fit-content;
+ }
 
- .aside {
+ /* the aside is where the about me/my work text is */
+ aside {
      flex: 1 0 10%; /* need to adjust the width on this one i think */
      border-right: black 2px dashed;
      font-size: 4em;
      text-align: right;
      padding: .5em;
  }
- 
+
+ /* element that houses the <p> tag */
+.about-me article {
+    flex: 1 0 80%;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+ p {
+    font-size: 1.5em;
+    margin: 1em;
+ }
+
+ /* class for section element which houses all cards and the aside */
+.my-work {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+/* class for section that houses just the cards (not the aside) */
+ .cards {
+     display: flex;
+     flex: 1 1 80%;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+ }
+/* layout for each individual card */
+ .card {
+     display: flex;
+     flex: 1 0 40%;
+     height: 175px;
+     margin: 3em;
+     background-image: url(../images/clouds.jpg);
+     transition: all 1.5s ease-in-out;
+     justify-content: center;
+     align-items: center;
+ }
+/* layout for large banner card. needs to come after .card to overwrite flex element, though it'll probably be simpler for it to not share a class with others and have a more unique set of attributes */
+ .large-card {
+     height: 250px;
+     flex: 1 0 70%;
+     margin: 20px;
+     background-image: url(../images/clouds.jpg);
+ }
+ /* turns whole card into an anchor link (needs to be added to all cards in the html */
+ .card a {
+     width: 100%;
+     height: 100%;
+ }
+
  /* the class for side description of project */
  .description {
     display: none;
@@ -97,74 +142,6 @@ main {
     font-size: 1.5em;
  }
 
-h5 {
-    color: black;
-    font-size: 2em;
-    opacity: .35;
-}
-
-.about-me {
-     display: flex;
-     flex: 1 0 100%;
-     height: fit-content;
- }
-/* need to change this class -- probably need to change the div to an aside and just refer to it by its element tag */
-
-
-
-/* section with all the cards (including large) */
-.my-work {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
- .card {
-     display: flex;
-     flex: 1 0 40%;
-     height: 175px;
-     margin: 3em;
-     background-image: url(../images/clouds.jpg);
-     transition: all 1.5s ease-in-out;
-     justify-content: center;
-     align-items: center;
- }
-
- .cards {
-     display: flex;
-     flex: 1 1 80%;
-     flex-wrap: wrap;
-     justify-content: space-evenly;
- }
-
- .large-card {
-     flex: 0 0 100%;
-     height: 250px;
-     flex: 1 0 70%;
-     margin: 20px;
-     background-image: url(../images/clouds.jpg);
- }
-
- .card:hover {
-     flex-grow: 10;
-     transform: scale(1.1);
-     box-shadow: inset 0px 0px 20px var(--main-color), 0 0 15px var(--main-background-color);
- }
-
- .card:hover .description {
-    box-shadow: inset 0px 0px 4px var(--main-color), 0 0 15px var(--main-background-color);
-    margin: 0 125% 0 0;
-    height: fit-content;
-    width: 20%;
-    position: absolute;
-    display: inline-block;
- }
-
- .card a {
-     width: 100%;
-     height: 100%;
- }
-
 footer {
     border-top: 2px dashed black;
     display: flex;
@@ -174,3 +151,20 @@ footer {
     justify-content: space-around;
     align-items: center;
 }
+/* increases card size/gives it a box shadow upon hover */
+ .card:hover {
+    flex-grow: 5; /* makes it so the card opposite it in the row shrinks as it grows */
+    transform: scale(1.05); 
+    box-shadow: inset 0px 0px 20px var(--main-color), 0 0 15px var(--main-background-color);
+ }
+/* gives parameters to the 'description' box when i hover over the card */
+ .card:hover .description {
+    box-shadow: inset 0px 0px 4px var(--main-color), 0 0 15px var(--main-background-color);
+    margin: 0 125% 0 0;
+    height: fit-content;
+    width: 20%;
+    position: absolute; /* without this the paramaters of the box become not what we want */
+    display: inline-block; /* it cannot be seen without this apparently */
+ }
+
+

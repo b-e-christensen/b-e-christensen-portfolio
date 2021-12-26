@@ -6,3 +6,19 @@
     linear-gradient(45deg, #c56af9 25%, transparent 25%);
     background-size: 100px 100px;
     background-color: #fbcc68; */
+
+
+ /* for if i want to add text over figure image along with h2 tag */
+ /* figure div {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+ } */
+/* for floating a div over an image
+ .portrait h3 {
+    float: right;
+    position: absolute;
+    z-index: 1000;
+    padding: 5px;
+} */
