@@ -68,17 +68,17 @@ main {
 
 .about-me {
      display: flex;
-     flex: 1 0 100%;
+     /* flex: 1 0 100%; */
      height: fit-content;
  }
 
  /* the aside is where the about me/my work text is */
- aside {
+aside {
      flex: 1 0 10%; /* need to adjust the width on this one i think */
      border-right: black 2px dashed;
      font-size: 4em;
-     text-align: right;
      padding: .5em;
+     text-align: right;
  }
 
  /* element that houses the <p> tag */
@@ -87,13 +87,13 @@ main {
     font-size: 1.5em;
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
  p {
     font-size: 1.5em;
     margin: 1em;
  }
-
  /* class for section element which houses all cards and the aside */
 .my-work {
     display: flex;
@@ -167,4 +167,29 @@ footer {
     display: inline-block; /* it cannot be seen without this apparently */
  }
 
+ .tablet-h3 {
+     display: none;
+ }
 
+
+/* media query for mobile */
+ @media screen and (min-width: 414px){
+
+ }
+
+ /* media query for tablets/smaller screens */
+ @media screen and (max-width: 991px) {
+
+    aside {
+        display: none;
+    }
+
+    .tablet-h3 {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 2.5em;
+        padding: .5em;
+    }
+
+ }
