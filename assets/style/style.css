@@ -129,6 +129,7 @@ aside {
      transition: all 1.5s ease-in-out;
      justify-content: center;
      align-items: center;
+     color: black;
  }
 /* layout for large banner card. needs to come after .card to overwrite flex element, though it'll probably be simpler for it to not share a class with others and have a more unique set of attributes */
  .large-card {
@@ -149,27 +150,6 @@ h2 {
     text-align: center;
     margin: 1em;
 }
-
-.surf {
-    color: black;
-}
-
-.calculator {
-    color: dimgray;
-}
-
-.run-buddy {
-    color: lightgoldenrodyellow;
-}
-
-.rpg {
-    color: lightcyan;
-}
-
-.twilio{
-    color: #984410;
-}
-
 
  /* the class for side description of project */
  .description {
@@ -200,7 +180,7 @@ footer {
 /* gives parameters to the 'description' box when i hover over the card */
  .card:hover .description {
     box-shadow: inset 0px 0px 4px var(--main-color), 0 0 15px var(--main-background-color);
-    margin: 0 130% 0 0;
+    margin: 0 125% 0 0;
     height: fit-content;
     width: 25%;
     position: absolute; /* without this the paramaters of the box become not what we want */
@@ -208,7 +188,7 @@ footer {
  }
 
  .large-card:hover .description {
-     margin: 0 115% 0 0;
+     margin: 0 110% 0 0;
      width: 13%;
  }
 
