@@ -131,6 +131,23 @@ aside {
      align-items: center;
      color: black;
  }
+
+ .code-quiz {
+     color: #333;
+ }
+
+ .weather-dashboard {
+     color: #000080;
+ }
+
+ .blur {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+ }
+
+ .white {
+    color: white;
+ }
 /* layout for large banner card. needs to come after .card to overwrite flex element, though it'll probably be simpler for it to not share a class with others and have a more unique set of attributes */
  .large-card {
      height: 250px;
