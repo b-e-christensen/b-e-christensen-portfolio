@@ -4,7 +4,7 @@
 
 * Contact info and resume can be found at the bottom of the page. Please reach out! 
 
-![Web Page Image](./assets/images/portfolio-web.png)
+![Web Page Image](./assets/images/portfolio-web.jpg)
 
 
 https://b-e-christensen.github.io/b-e-christensen-portfolio/
