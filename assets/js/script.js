@@ -6,7 +6,7 @@ let stillAnchor = document.createElement('a')
 let budgettlyAnchor = document.createElement('a')
 let hamletAnchor = document.createElement('a')
 
-stillAnchor.href = 'https://github.com/b-e-christensen/travel-app'
+stillAnchor.href = 'https://github.com/b-e-christensen/mvc-tech-blog'
 stillAnchor.target = '_blank'
 stillAnchor.textContent = ' Click here to view repository.'
 stillAnchor.classList.add('white')
