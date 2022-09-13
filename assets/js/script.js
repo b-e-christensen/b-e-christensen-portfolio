@@ -1,12 +1,13 @@
-let stillDescr = document.getElementById('still-travel-h4')
-let budgettlyDescr = document.getElementById('budgettly-h4')
-let hamletDescr = document.getElementById('hamlet-h4')
+let proj1Descr = document.getElementById('proj-1-h4')
+let proj2Descr = document.getElementById('proj-2-h4')
+let proj3Descr = document.getElementById('proj-3-h4')
+
 
 let stillAnchor = document.createElement('a')
 let budgettlyAnchor = document.createElement('a')
 let hamletAnchor = document.createElement('a')
 
-stillAnchor.href = 'https://github.com/b-e-christensen/mvc-tech-blog'
+stillAnchor.href = 'https://github.com/b-e-christensen/lore-keeper-python'
 stillAnchor.target = '_blank'
 stillAnchor.textContent = ' Click here to view repository.'
 stillAnchor.classList.add('white')
@@ -21,6 +22,6 @@ hamletAnchor.target = '_blank'
 hamletAnchor.textContent = ' Click here to view repository.'
 hamletAnchor.classList.add('white')
 
-stillDescr.append(stillAnchor)
-budgettlyDescr.append(budgettlyAnchor)
-hamletDescr.append(hamletAnchor)
+proj2Descr.append(stillAnchor)
+proj3Descr.append(budgettlyAnchor)
+proj1Descr.append(hamletAnchor)
